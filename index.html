@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080807">
+<meta name="description" content="Creative Studio — premium visual design for brands, creators and celebrations.">
+<title>Creative Studio | Premium Design Landing Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080807;--surface:#11110f;--surface2:#171613;--gold:#c9a96e;--gold2:#ead7ad;--cream:#f5f0e6;--muted:#aaa49a;--line:rgba(201,169,110,.2);--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+.topline{height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold2),transparent)}
+header{position:sticky;top:0;z-index:20;background:rgba(8,8,7,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font:600 1.16rem var(--serif);letter-spacing:.15em}.logo b{color:var(--gold);font-weight:500}.navlinks{display:flex;gap:30px;color:#c3bdb2;font-size:.82rem}.navlinks a:hover{color:var(--gold2)}.nav-cta{border:1px solid var(--line);padding:10px 17px;border-radius:99px;color:var(--gold2);font-size:.78rem;letter-spacing:.04em}
+.hero{min-height:690px;display:grid;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06);background:radial-gradient(ellipse at 75% 48%,rgba(155,116,55,.16),transparent 35%),linear-gradient(110deg,#080807 35%,#11100d)}
+.hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(201,169,110,.15);border-radius:50%;right:-90px;top:50%;transform:translateY(-50%);box-shadow:0 0 0 42px rgba(201,169,110,.025),0 0 0 90px rgba(201,169,110,.018)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:45px;position:relative;z-index:1;padding:95px 0}
+.kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.25em;color:var(--gold);font-weight:700}.hero h1{font:500 clamp(3.5rem,7.4vw,6.8rem)/.99 var(--serif);letter-spacing:-.045em;margin:22px 0}.hero h1 em{font-weight:400;color:var(--gold2)}.hero-copy{max-width:530px;color:#b8b1a5;font-size:1rem}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:3px;background:var(--gold);color:#17130b;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.25s}.btn:hover{background:var(--gold2);transform:translateY(-2px)}.btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(255,255,255,.2)}.hero-note{margin-top:54px;color:#817b70;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.hero-art{height:475px;position:relative;display:flex;align-items:center;justify-content:center}.hero-frame{width:min(390px,90%);height:440px;position:relative;transform:rotate(3deg);border:1px solid rgba(234,215,173,.55);padding:12px;background:#18150f;box-shadow:0 28px 80px #000}.hero-poster{height:100%;background:radial-gradient(circle at 50% 35%,#9e7943,#382918 43%,#15110b 78%);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}.hero-poster:before,.hero-poster:after{content:"";position:absolute;border:1px solid rgba(244,222,174,.48);border-radius:50%;width:280px;height:280px}.hero-poster:after{width:220px;height:220px}.poster-copy{position:relative;z-index:1;color:#fff1cf}.poster-copy small{letter-spacing:.32em;font-size:.55rem}.poster-copy strong{display:block;font:500 3rem/.98 var(--serif);margin:25px 0}.poster-copy span{font-size:.58rem;letter-spacing:.22em}.floating-tag{position:absolute;bottom:28px;left:-2px;background:#e7d5ad;color:#17130c;padding:14px 18px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 12px 30px #000}
+section{padding:108px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:44px}.section-title{font:500 clamp(2.5rem,5vw,4rem)/1.05 var(--serif);letter-spacing:-.035em;margin:10px 0 0}.section-intro{max-width:390px;color:var(--muted);font-size:.9rem}.eyebrow{color:var(--gold);font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}.work{grid-column:span 4}.work.wide{grid-column:span 7}.work.tall{grid-column:span 5}.visual{height:330px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:#19150e}.work.wide .visual,.work.tall .visual{height:390px}
+.visual .label{position:absolute;left:22px;top:20px;font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;z-index:2}.visual .center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}
+.visual .frame-line{position:absolute;inset:15px;border:1px solid rgba(255,255,255,.35);pointer-events:none}
+.visual h3{font:500 clamp(2rem,4vw,3.1rem)/.98 var(--serif);margin:0}.visual p{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;margin:17px 0 0}
+.v-invite{background:radial-gradient(circle at 50% 35%,#a47d43,#45321d 50%,#15110b)}.v-invite .center{color:#f8e8c2}.v-invite h3{font-size:3.1rem}
+.v-fashion{background:linear-gradient(140deg,#d5c8ad,#9e8a6a 50%,#29231b);color:#211b13}.v-fashion .center{align-items:end;padding-bottom:54px}.v-fashion h3{font-size:3.8rem}
+.v-cafe{background:radial-gradient(circle at 70% 25%,#9c7650,#33251b 48%,#15110e);color:#f4dfbd}.v-cafe h3{font-size:3.3rem}
+.v-thumbnail{background:linear-gradient(135deg,#b28c4d,#3d2b19 60%,#111);color:#fff1c9}.v-thumbnail h3{font:700 3.1rem/.9 var(--sans);letter-spacing:-.06em;text-transform:uppercase}
+.v-festive{background:radial-gradient(circle,#9b743d,#2d2013 65%,#100d09);color:#f5dfb1}.v-festive h3{font-size:3.5rem}
+.v-menu{background:linear-gradient(135deg,#e5d6b7,#8b7452);color:#241b11}.v-menu h3{font-size:3rem}
+.work-meta{display:flex;justify-content:space-between;gap:12px;padding:15px 2px 0}.work-meta strong{font:500 1.08rem var(--serif)}.work-meta span{color:var(--muted);font-size:.72rem}
+.about{background:#10100e;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:center}.about-mark{min-height:330px;display:grid;place-items:center;border:1px solid var(--line);background:radial-gradient(circle,rgba(201,169,110,.14),transparent 62%)}.monogram{font:500 8rem var(--serif);color:var(--gold);border:1px solid var(--gold);width:210px;height:210px;display:grid;place-items:center;border-radius:50%}.about-copy p{color:var(--muted);max-width:620px}.principles{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px}.principles span{color:var(--gold2);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.service{padding:27px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:185px}.service small{color:var(--gold);letter-spacing:.15em}.service h3{font:500 1.35rem var(--serif);margin:17px 0 7px}.service p{color:var(--muted);font-size:.83rem;margin:0}
+.pricing{background:#10100e}.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.price-card{padding:27px;border:1px solid var(--line);background:#14130f}.price-card.featured{background:linear-gradient(145deg,#292113,#14120e);border-color:rgba(201,169,110,.6)}.price-card h3{font:500 1.25rem var(--serif);margin:0}.price-card .amount{font:500 2rem var(--serif);color:var(--gold2);margin:16px 0 6px}.price-card p{font-size:.82rem;color:var(--muted);min-height:50px}.price-card small{color:#857e72;font-size:.68rem}
+.contact-panel{border:1px solid var(--line);padding:clamp(28px,6vw,65px);text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(201,169,110,.12),transparent 65%),#11100d}.contact-panel h2{font:500 clamp(2.7rem,6vw,4.8rem)/1.04 var(--serif);margin:16px 0}.contact-panel p{color:var(--muted);max-width:570px;margin:0 auto 27px}.safety{max-width:700px;margin:28px auto 0;padding:15px 18px;border-left:2px solid var(--gold);background:rgba(201,169,110,.06);text-align:left;color:#aaa294;font-size:.78rem}
+footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.08);color:#8b857b;font-size:.72rem}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-row b{font:500 1rem var(--serif);color:var(--gold2);letter-spacing:.1em}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr;padding:78px 0 55px}.hero{min-height:unset}.hero-art{height:400px}.hero-frame{height:370px}.hero:after{right:-300px}.section-top{display:block}.section-intro{margin-top:18px}.work{grid-column:span 6}.work.wide,.work.tall{grid-column:span 6}.work.wide .visual,.work.tall .visual,.visual{height:285px}.about-grid{grid-template-columns:1fr;gap:38px}.about-mark{min-height:260px}.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.wrap{width:calc(100% - 30px)}.nav{height:auto;min-height:72px;align-items:flex-start;flex-direction:column;justify-content:center;padding:12px 0;gap:10px}.navlinks{width:100%;justify-content:space-between;gap:8px;font-size:.7rem}.nav-cta{display:none}.hero h1{font-size:3.45rem}.hero-art{height:340px}.hero-frame{height:315px;width:82%}.poster-copy strong{font-size:2.4rem}.floating-tag{font-size:.55rem;bottom:12px}.hero-note{margin-top:35px}section{padding:75px 0}.work-grid{gap:14px}.work,.work.wide,.work.tall{grid-column:span 6}.work.wide .visual,.work.tall .visual,.visual{height:220px}.visual h3{font-size:1.9rem!important}.visual .label{left:13px;top:13px;font-size:.48rem}.visual .frame-line{inset:9px}.work-meta{display:block}.work-meta span{display:block;margin-top:3px}.services-grid,.price-grid{grid-template-columns:1fr}.service{min-height:unset}.price-card p{min-height:unset}.about-mark{min-height:220px}.monogram{width:155px;height:155px;font-size:6rem}.actions{display:block}.actions .btn{width:100%;margin:0 0 10px}.contact-panel{padding:30px 18px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#top">CREATIVE <b>STUDIO</b></a>
+  <nav class="navlinks"><a href="#work">Work</a><a href="#about">Studio</a><a href="#services">Services</a><a href="#pricing">Pricing</a></nav>
+  <a class="nav-cta" href="#contact">START A PROJECT ↗</a>
+</div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="kicker">Independent creative design studio</div>
+    <h1>Designed to be<br><em>remembered.</em></h1>
+    <p class="hero-copy">Thoughtful visuals for modern brands, creators and meaningful moments. We turn simple ideas into polished designs with a distinctive golden touch.</p>
+    <div class="actions"><a class="btn" href="#work">Explore selected work</a><a class="btn ghost" href="#contact">Discuss a project</a></div>
+    <div class="hero-note">Visual identity · Digital design · Creative details</div>
+  </div>
+  <div class="hero-art"><div class="hero-frame"><div class="hero-poster"><div class="poster-copy"><small>CREATIVE STUDIO PRESENTS</small><strong>The Art<br>of Details</strong><span>LESS NOISE. MORE MEANING.</span></div></div></div><div class="floating-tag">A little different. By design.</div></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="section-top"><div><div class="eyebrow">01 / Selected concepts</div><h2 class="section-title">A few things<br>we've created.</h2></div><p class="section-intro">A curated collection of original sample concepts across invitations, social campaigns, creator graphics and everyday brand moments.</p></div>
+  <div class="work-grid">
+    <article class="work wide"><div class="visual v-invite"><div class="label">01 — Celebration suite</div><div class="frame-line"></div><div class="center"><div><h3>Golden<br>Moments</h3><p>An invitation to celebrate</p></div></div></div><div class="work-meta"><strong>The Celebration Edit</strong><span>Invitation design</span></div></article>
+    <article class="work tall"><div class="visual v-fashion"><div class="label">02 — Editorial campaign</div><div class="frame-line"></div><div class="center"><div><p>THE NEW PERSPECTIVE</p><h3>Quiet<br>Luxury.</h3><p>FORM · FEELING · FINISH</p></div></div></div><div class="work-meta"><strong>Quiet Luxury</strong><span>Brand poster</span></div></article>
+    <article class="work"><div class="visual v-cafe"><div class="label">03 — Cafe identity</div><div class="frame-line"></div><div class="center"><div><p>GOOD COFFEE, GOOD DAYS</p><h3>Sunday<br>Roast</h3><p>EST. WITH LOVE</p></div></div></div><div class="work-meta"><strong>Sunday Roast</strong><span>Social promotion</span></div></article>
+    <article class="work"><div class="visual v-thumbnail"><div class="label">04 — Creator series</div><div class="frame-line"></div><div class="center"><div><p>MAKE IT HAPPEN</p><h3>CREATE<br>MORE.</h3><p>YOUR NEXT BIG IDEA</p></div></div></div><div class="work-meta"><strong>Create More</strong><span>Video thumbnail</span></div></article>
+    <article class="work"><div class="visual v-festive"><div class="label">05 — Seasonal greeting</div><div class="frame-line"></div><div class="center"><div><p>A SEASON OF LIGHT</p><h3>Shine<br>Bright</h3><p>WARM WISHES</p></div></div></div><div class="work-meta"><strong>Season of Light</strong><span>Greeting design</span></div></article>
+    <article class="work"><div class="visual v-menu"><div class="label">06 — Hospitality</div><div class="frame-line"></div><div class="center"><div><p>FRESH · SIMPLE · GOOD</p><h3>The Daily<br>Menu</h3><p>MADE FOR EVERY DAY</p></div></div></div><div class="work-meta"><strong>The Daily Menu</strong><span>Menu layout</span></div></article>
+  </div>
+  <p style="color:#817b70;font-size:.72rem;margin-top:24px">Portfolio note: These are original sample concepts made for this starter website. Replace them with your own finished client or practice designs before presenting them as commissioned work.</p>
+</div></section>
+
+<section class="about" id="about"><div class="wrap about-grid">
+  <div class="about-mark"><div class="monogram">C.</div></div>
+  <div class="about-copy"><div class="eyebrow">02 / The studio</div><h2 class="section-title">Good design is<br>in the details.</h2><p>Creative Studio is a growing independent design project focused on clear communication, thoughtful layouts and memorable visual details. Every project starts with an idea and gets shaped into something people can connect with.</p><p>Small beginnings. Big creative energy. Always learning, always creating.</p><div class="principles"><span>✦ Clear layouts</span><span>✦ Thoughtful colour</span><span>✦ Made with care</span></div></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="section-top"><div><div class="eyebrow">03 / What we do</div><h2 class="section-title">Creative, with<br>a clear purpose.</h2></div><p class="section-intro">Digital-first design services for people and small projects that want to look considered and professional.</p></div>
+  <div class="services-grid">
+    <article class="service"><small>01 / SOCIAL</small><h3>Social media design</h3><p>Posts, stories and promotional graphics.</p></article>
+    <article class="service"><small>02 / EVENTS</small><h3>Invitations & announcements</h3><p>Digital invitations for celebrations and events.</p></article>
+    <article class="service"><small>03 / CREATORS</small><h3>YouTube thumbnails</h3><p>Bold, readable graphics for video content.</p></article>
+    <article class="service"><small>04 / BUSINESS</small><h3>Business posters</h3><p>Simple advertisements and offer creatives.</p></article>
+    <article class="service"><small>05 / SEASONAL</small><h3>Festival greetings</h3><p>Shareable seasonal and festive designs.</p></article>
+    <article class="service"><small>06 / PRINT-READY</small><h3>Menus & flyers</h3><p>Organised layouts for menus and digital flyers.</p></article>
+  </div>
+</div></section>
+
+<section class="pricing" id="pricing"><div class="wrap">
+  <div class="section-top"><div><div class="eyebrow">04 / Starting points</div><h2 class="section-title">Simple, clear<br>starter pricing.</h2></div><p class="section-intro">Example introductory prices. Final scope, revisions and delivery time should be agreed before accepting any request.</p></div>
+  <div class="price-grid">
+    <article class="price-card"><h3>Essential Graphic</h3><div class="amount">₹50–₹100</div><p>One simple greeting, invitation or single graphic.</p><small>ONE DIGITAL DESIGN</small></article>
+    <article class="price-card featured"><h3>Social Creative</h3><div class="amount">₹100–₹150</div><p>One promotional post or social media creative.</p><small>ONE DIGITAL DESIGN</small></article>
+    <article class="price-card"><h3>Creator Thumbnail</h3><div class="amount">₹100–₹150</div><p>One custom thumbnail concept for a video.</p><small>ONE DIGITAL DESIGN</small></article>
+  </div>
+  <p style="color:#827b70;font-size:.72rem;margin-top:18px">Illustrative starter rates only; earnings are not guaranteed. Pricing can change based on the work requested.</p>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="contact-panel">
+  <div class="eyebrow">05 / Your next idea starts here</div>
+  <h2>Let's make it<br><em style="color:var(--gold2);font-weight:400">stand out.</em></h2>
+  <p>Have a design request or a question? A parent or guardian can help manage enquiries and coordinate any project safely.</p>
+  <a class="btn" href="#work">Explore the portfolio</a>
+  <div class="safety"><strong style="color:var(--gold2)">Before accepting enquiries:</strong> This is a student portfolio. A parent or guardian should manage customer communication, approve projects and prices, and handle payments. Do not publish personal phone numbers, home address, school details, passwords or OTPs. The contact button must be updated with a parent-managed email before the site goes live.</div>
+</div></div></section>
+</main>
+<footer><div class="wrap footer-row"><b>CREATIVE STUDIO</b><span>Independent ideas. Considered design.</span><span>© <span id="year"></span> Creative Studio</span></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
